@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="pt">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      Aprendendo Js
+    </title>
+  </head>
+
+  <body>
+    <img>
+      scr = ""
+      id = "Kronk"
+    </img>
+
+    <script>
+      catchKronk().catch(error => {
+        console.log('error!');
+        console.error(error);
+      });
+
+      async function catchKronk() {
+        const response = await fetch('Kronk');
+        const blob = await response.blob();
+        document.getElementById('Kronk').src = URL.createObjectURL(blob)
+      }
+    </script>
+
+    <img>
+      scr = ""
+      id = "skeleton"
+    </img>
+
+  </body>
+</html>
